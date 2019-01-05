@@ -57,9 +57,10 @@ def play(board)
   turns = 0 
   while turns < 9 
     turn(board)
-    if won?(board)
-      puts "Congratulations #{winner(board)}!"
-      return
+    if over?(board)
+      if won?(board)
+        puts "Congratulations #{winner(board)}!"
+        
     end
     turns += 1
   end
