@@ -63,7 +63,24 @@ end
 
 # turn_count
 def turn_count(board)
-  board.
+  count = 0 
+  board.each do |el|
+    if el == "X" || el == "O"
+      count += 1
+    end
+  end
+  count
+end
+
+# current_player
+def current_player(board)
+  player = "X"
+  if turn_count(board) % 2 != 0
+    player = "O"
+  end
+  player
+end
+
 # won?
 def won?(board)
   WIN_COMBINATIONS.each do |combo|
