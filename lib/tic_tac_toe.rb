@@ -54,17 +54,14 @@ end
 
 # Define your play method below
 def play(board)
-  turns = 0 
-  while turns < 9 
+  until over?(board) do
     turn(board)
-    if over?(board)
-      if won?(board)
-        puts "Congratulations #{winner(board)}!"
-        
-    end
-    turns += 1
   end
-  puts "It's a draw."
+  if won?(board)
+    puts "Congratulations #{winner(board)}!"
+  else
+    puts "It's a draw."
+  end
 end
 
 # turn_count
