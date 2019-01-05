@@ -58,12 +58,12 @@ def play(board)
   while turns < 9 
     turn(board)
     if won?(board)
-      puts "Congratulations #{winner(board)}"
-      break
+      puts "Congratulations #{winner(board)}!"
+      return
     end
-      
     turns += 1
   end
+  puts "It's a draw."
 end
 
 # turn_count
