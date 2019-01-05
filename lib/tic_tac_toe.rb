@@ -61,6 +61,9 @@ def play(board)
   end
 end
 
+# turn_count
+def turn_count(board)
+  board.
 # won?
 def won?(board)
   WIN_COMBINATIONS.each do |combo|
